@@ -1,0 +1,327 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Sushi-ness*/
+
+/*<common>*/
+body {
+	font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	background: #000000;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: bold;
+}
+.fixed { position: fixed; top: 36px; z-index: 100; }
+.fixed-nav { position: fixed !important; top: 0 !important; z-index: 100; }
+.fix-pad { margin-top: 62px; }
+.empty, .empty li { margin: 0 !important; padding: 0 !important; border: 0 !important; }
+.empty li, a.empty { display: none !important; }
+.white { color: #00aeef; }
+/*</common>*/
+/*<structure>*/
+#wrap { width: 985px; margin: auto; position: relative; min-height:100%; background:#0a0a0a; }
+#header {  margin-bottom: 0; border-bottom: 1px solid #000; height:280px; }/*prevent margin collapse*/
+#main { overflow: hidden; height:100%;}
+#left { float: left; width: 600px; padding: 0 0 20px 30px; }
+#right { float: right; width: 270px; padding: 0 0 20px 0; }
+#nav { position: absolute; top: 200px; width: 100%; background: black; border-top: 1px solid; border-bottom: 1px solid; font-size:14px; font-weight:bold;}
+/*</structure>*/
+/*<header>*/
+/*#header h4 {font-family: "Aclonica", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; font-size: 50px; width:300px; position:relative; top: -190px; left:230px;}*/
+#header h4 {font-family:  Georgia, serif; font-size: 45px; width:400px; position:relative; top: -150px; left:300px;}
+/*#ec008c*/
+#header a {text-decoration:none; color:#007EC4;}
+#header a:hover { text-decoration: none; }
+#header a:visited {text-decoration: none; color:#007EC4;}
+/*</header>*/
+/*<left>*/
+#left h2 { width: 590px; font-size: 25px; border-bottom: 2px solid; line-height: 2; margin: 0 0 10px 0; background: #000; }
+#left h1 { font-size:16px; color:#ffffff;}
+#food {  }
+.menu { width:260px; background: #000000; padding: 10px; margin: 0 10px 10px 0; position: relative; border:1px solid #212121;}
+.menu-title { margin: 0 auto; width: 260px; position: relative;}
+.menu-title h1 { font-size: 14px; color:#00aeef; background-color: #212121; }
+.menu-title p { font-size: 10px; color:#00aeef; background-color: #212121;}
+.menu-title a { text-indent: -9999px; width: 32px; height: 32px; background: url('../grafix/sprite.png') -33px 0; position: absolute; bottom: 2px; right: 0; cursor: pointer; background-color:#d8d8d2;}
+.menu-title a:hover { background-position: 0 0; }
+.menu-title span { float: left; width: 7px; height: 7px; border: 1px solid; margin-right:4px; top:1px; position:relative;}
+.menu .menu-image {  }
+.menu .menu-image img { display: block; margin: 0 auto; width: 260px; height: 173px; }
+.menu .menu-description { opacity: 0; width: 260px; position: absolute; bottom: 10px; left: 50%; margin-left: -130px; }
+/*CSS hover is handled in head.php to hide from IE*/
+.menu .menu-description p { padding: 0 10px }
+/*</left>*/
+/*<right>*/
+#right h3 { font-size: 16px; padding-top: 17px; }
+#cart { margin-top: 9px; border-top: 2px solid; width: 270px; }
+#cart.fixed { margin-top: 49px; }
+#cart ul { margin-top: 10px; border-bottom: 1px solid; } /*prevent border collapse*/
+#cart ul li { background: #212121; padding: 5px; margin-bottom: 5px; overflow: auto; position: relative; }
+#cart ul li.last { margin-bottom: 0; }
+#cart ul li img { float: left; width: 60px; height: 40px; }
+#cart ul li .cart-detail { overflow: hidden; padding-left: 5px; }
+#cart ul li .cart-detail strong {  }
+#cart ul li .cart-detail .qty-detail { }
+#cart ul li .cart-detail .qty-detail input { 
+	background-color: #1A1A1A;
+    border: none;
+    color: #EEEEEE;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 4px 0 2px;
+    text-align: center;
+    width: 18px;
+}
+#cart ul li .cart-detail .qty-detail .controls { font-size: 18px; float: left; padding: 0 10px; }
+#cart ul li .cart-detail .qty-detail .controls a { background: url('../grafix/sprite.png') 0 0; display: block; width: 8px; height: 8px; cursor: pointer; line-height: 0.5; text-indent: -9999px; }
+#cart ul li .cart-detail .qty-detail .controls a.plus { background-position: -91px 0; margin-bottom: 3px; }
+#cart ul li .cart-detail .qty-detail .controls a.minus { background-position: -91px -27px; }
+#cart ul li .cart-detail .qty-detail .controls a.plus:hover { background-position: -100px 0; }
+#cart ul li .cart-detail .qty-detail .controls a.minus:hover { background-position: -100px -27px; }
+#cart ul li .cart-detail .qty-detail p { float: left; }
+#cart ul li .cart-detail .qty-detail p span {}
+#cart ul li .cart-detail .qty-detail .remove { text-indent: -9999px; position: absolute; width: 10px; height: 10px; top: 5px; right: 5px; background: url('../grafix/sprite.png')  -67px -1px; cursor: pointer; }
+#cart ul li .cart-detail .qty-detail .remove:hover { background-position: -80px -1px; }
+#cart #total { margin-top: 5px; }
+#cart #total li { text-align: right; font-weight: bold; font-size: 14px; }
+#buy { display: block; padding: 5px 10px; margin-top: 5px; background: #25421C; color: #fff; font-weight: bold; text-align: right; text-decoration: none; }
+#buy:hover { background: #02581d; }
+/*</right>*/
+/*<nav>*/
+#nav ul { width: 985px; margin: 0 auto; padding:0;list-style-type: none;}
+#nav ul li { display: inline-block; }
+#nav ul li a { display: block; padding: 8px 7px; text-decoration: none; }
+#nav ul li a:hover { text-decoration: underline; }
+#nav ul li a#current { color: #EC008C; border-left: 1px solid; border-right: 1px solid; text-decoration: underline; }
+a#current span { color: #EC008C; }
+/*</nav>*/
+
+#contact {float:right; position:relative; top:15px; font-size:13px; color:#00aeef; width:300px; text-align: right;}
+#contact a {text-decoration: none; color:#00aeef}
+#contact a:visited {color:#00aeef}
+
+#contactinfo {font-size: 14px; margin-top:50px; margin-bottom:20px; width:270px;}
+#contactinfo h1 {font-size: 16px;}
+#contactinfo a {text-decoration:none; color:#00aeef;}
+#contactinfo a:hover { text-decoration: none; }
+#contactinfo a:visited {text-decoration: none; color:#00aeef;}
+
+#footer { height:40px; position:absolute; width:985px; color:#ccc; text-align: center;}
+
+.smallcontainer{width:600px; text-align:left; border-top:3px solid #ffffff; color:#ffffff; margin-bottom:30px; font-size:16px;overflow: hidden;}
+#frontpagerightcolumn{}
+#frontpagerightcolumn.fixed { margin-top: 49px; }
+
+.smallGreenButton { width:60px; padding:2px 10px; background-color:#25421c; border:0; color:#ffffff;}
+/***********
+styles for checkouy page
+***********/
+.checkout .row {
+        clear: left;
+        float: left;
+        width: 500px;
+        margin-bottom: 10px;
+        color:#ffffff;
+ }
+ 
+.checkout .row label {
+float: left;
+width: 100px;
+margin-top: 4px;
+color: #ffffff;
+}
+
+.checkout span{
+    color:#ffffff;
+}
+
+.checkout .error label {
+color: #d71923;
+}
+
+.checkout .req {
+padding-left: 2px;
+font-weight: bold;
+color: #d71923;
+}
+
+.checkout .row input,
+.checkout .row textarea {
+width: 180px;
+padding: 2px;
+font: 12px/1.31 Arial, sans-serif;
+color: #333;
+background-color: #f3f3f3;
+border: 2px solid #333;
+}
+
+#afhentningsmetode input{
+    width:30px;
+}
+.checkout .error input,
+.checkout .error textarea {
+margin: 1px;
+border: 1px solid #d71923;
+}
+
+.checkout .row textarea {
+width: 320px;
+height: 160px;
+margin-bottom: -11px;
+}
+
+.checkout .row .disabled {
+color: #444;
+background-color: #ccc;
+}
+
+.checkout .row .short {
+width: 30px;
+}
+
+.checkout .labels {
+position: relative;
+margin: -3px 0 -5px;
+padding-left: 100px;
+}
+
+.checkout .labels p {
+position: absolute;
+top: 0;
+left: 0;
+color: #eee;
+}
+
+.checkout .labels .error {
+color: #d71923;
+}
+
+.checkout .labels label {
+position: relative;
+display: block;
+width: 382px;
+margin-bottom: 2px;
+padding-left: 18px;
+background-position: 0 -798px;
+}
+
+.checkout .labels span {
+color: #888;
+-webkit-transition: color 200ms ease-out;
+-moz-transition: color 200ms ease-out;
+ -o-transition: color 200ms ease-out;
+	transition: color 200ms ease-out;
+}
+
+.checkout .labels input {
+position: absolute;
+left: -999em;
+visibility: hidden;
+}
+
+.checkout .labels :hover span {
+color: #bbb;
+}
+
+.checkout .attention {
+    color:#E4E34a;
+}
+
+/*reflection*/
+.reflected {
+    position: relative;
+}
+.reflected:after {
+    content: 'YUMMY SUSHI';
+    display: block;
+    position: absolute;
+    bottom: -.55em; /* You should change this value to fit your font */
+    left: 0;
+    right: 0;
+    opacity: .5;
+
+    /* This is how the text is flipped vertically */
+    -webkit-transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+}
+
+/*<ajax_filter>*/
+#ajax_filter ul { padding: 0; margin: 0; list-style: none; font-family: Arial, sans-serif; }
+/*grey "checkboxes"*/
+#ajax_filter a { cursor: pointer; display: block;}
+#ajax_filter a:active { color: #000; }
+#ajax_filter a span { float: left; width: 7px; height: 7px; border: 1px solid; margin-right:4px; top:1px; position:relative;}
+#ajax_filter a.checked span { background: #808080; }
+
+
+/* for showing divs as tables*/
+.div-table{
+  display:table;         
+  width:auto;         
+  background-color:#eee;         
+  border:1px solid  #666666;         
+  border-spacing:1px;/*cellspacing:poor IE support for  this*/
+}
+.div-table-row{
+  display:table-row;
+  width:auto;
+  clear:both;
+}
+.div-table-col{
+  float:left;/*fix for  buggy browsers*/
+  display:table-column;         
+  width:195px;         
+  background-color:#000000;  
+}
+
