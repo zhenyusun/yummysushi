@@ -1,0 +1,9 @@
+#Remember order of rewrite rules!
+#checkout needs to be first, index.php processes all else
+RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^bestilling.html$ checkout.php [L]
+RewriteRule ^kontakt$ contact.php [L]
+RewriteRule ^([^/]*)\.html$ /products.php?catname=$1 [L]
+RewriteRule ^([A-Za-z0-9\-\_]+)/?$ /products.php?catname=$1 [L]
